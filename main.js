@@ -21,8 +21,7 @@ function playPause(){
 if(song.play){
   setInterval(()=>{
    progress.value =song.currentTime;
-   console.log(parseInt(song.currentTime))
-  },500)
+  },1000)
 }
 progress.addEventListener('change', ()=>{
   song.play();
