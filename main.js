@@ -1,12 +1,12 @@
 let progress = document.getElementById('progress');
 let song = document.getElementById('song');
 let ctrlIcon = document.getElementById('ctrlIcon');
-
+/*
 song.addEventListener('loadedmetadata', ()=>{
   progress.max = song.duration;
   progress.value = song.currentTime;
   
-});
+});*/
 function playPause(){
   if(ctrlIcon.classList.contains('fa-pause')){
     song.pause();
@@ -21,6 +21,7 @@ function playPause(){
 if(song.play){
   setInterval(()=>{
    progress.value =song.currentTime;
+   console.log(parseInt(song.currentTime))
   },500)
 }
 progress.addEventListener('change', ()=>{
